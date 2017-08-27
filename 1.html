@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" simple glow effect to button using css">
+    <meta name="keywords" content="glow effect , css , cool css , cool css effect , css button effects">
+    <title>btn-glow</title>
+    <style>
+    body{
+       background: black;
+
+    }
+    .container{
+        border: 1px solid black;
+        width: 98vw;
+        height: 98vh;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        
+    }
+    .container div{
+        
+        width: 10vw;
+        height: 18vh;
+        position: absolute;
+        margin-top: 10vh;
+        text-align: center;
+        line-height: 18vh;
+        border-radius: 15px; /* by giving " border-radius: 50% " you can make your button circle*/
+        font-size: 5vw;
+        opacity: .3;
+        
+        
+    }
+    .btndown{
+        z-index: -2;
+        
+        transform: scale(1.05);
+        transition: .6s;
+
+    }
+    .btnup{
+        background: white;
+        transition: all .6s;
+    }
+    .btnup:hover{
+        color: gold;
+        cursor: pointer;
+        opacity: 1;
+        
+    }
+    .btnup:hover + .btndown {
+            background: goldenrod;
+            opacity: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btnup">up</div>
+        <div class="btndown"></div>
+
+    </div>
+</body>
+</html>
