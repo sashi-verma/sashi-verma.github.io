@@ -1,0 +1,418 @@
+<html>  
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                <meta name="viewport" content="width=device-width,initial-scale=1"/>
+            
+            <style>
+                *{
+                    font-family: sans-serif;
+                }
+                body{
+                    padding: 0;
+                    background: black;
+                }
+                .nav{
+                    background: white ;
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    position: fixed;
+                    bottom: 5%;
+                    right: 5%;
+                    z-index: 2;
+                    text-align: center;
+                    font-size: 300%;
+                    
+                }
+                .nav:hover{
+                    box-shadow: 5px 5px 15px;
+                    cursor: pointer;
+                    
+                }
+                .header{
+                    width: 100%;
+                    z-index: 3;
+                    top: 0;
+                    left: 0;
+                    position: fixed;
+                    padding-top: 1%;
+                    height: 7vw;
+                    background: rgb(26,26,26);
+                    box-shadow: 0px 5px 10px;
+                    
+                    display: flex;
+    
+                    margin: 0;
+                }
+                .header h1{
+                    margin: 0;
+                    opacity: .3;
+                    color: grey;
+                    font-size: 5vw;
+                }
+                .header h4{
+                    margin-top: 5%;
+                    font-size: 2vw;
+                    margin-left: 5vw;
+                    color: white;
+                }
+                .header h4:hover{
+                    color: grey;
+                    cursor: pointer;
+                }
+                @media (max-width:500px){
+                   .header h4 { 
+                       margin-top: 0;
+                       font-size: 3vh;
+                   }
+                   .header h1{
+                    
+                    font-size: 4vw;
+                     }
+    
+                     #mobile,#email{
+                        margin-top: 50%;
+                     }
+                     .d1 span h1{
+                         font-size: 7vw;
+                     }
+                    
+                }
+                .d1{
+                    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/44/bb/50/44bb50d043b19f701f3843d4c7906942.jpg");
+                    width: 100%;
+                    height: 100vh;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    color: #D7DBDD;
+                    font-family: sans-serif;
+                    font-size: 3vw;
+                   margin: 0;
+                   position: relative;
+                    text-align: center;
+            
+    
+                }
+                .txtport{
+                    position: absolute;
+                    top: 50%;
+                   transform: translateY(-50%);
+                   left: 25%;
+    
+                   
+                }
+                .d2{
+                    margin: 0;
+                    padding-top:20vh;
+                    width: 100%;
+                    padding-bottom: 20vh;
+                    background: rgb(26,26,26);
+                    opacity: .9;
+                    color: white;
+                     overflow: hidden;
+                }
+                .skills{
+                  
+                    height: 20vh;
+                    text-align: center;
+                    position: relative;
+                    align-items: center;
+                }
+                .skills span{
+                    position: absolute;
+                    top: 50%;
+                    left: 33%;
+                    font-family: lato ,sans-serif;
+                    
+                    
+                    transform: translateY(-50%);
+                   align-items: center;
+                    font-size: 10vw;
+                    color: grey;
+    
+                }
+                .slider figure{
+                    margin: 0;
+                    float: left;
+                    padding: 0;
+                    width: 300%;
+                    position: relative;
+                    animation: slidy 25s infinite;
+                }
+                @keyframes slidy {
+                    0%{
+                    left: 0%;
+                   }
+                   19%{
+                    left: -100%;
+                   }
+                   38%{
+                    left: -200%;
+                   }
+                   50%{
+                    left: -300%;
+                   }
+                   69%{
+                    left: -200%;
+                   }
+                   89%{
+                    left: -100%;
+                   }
+                   100%{
+                    left: 0%;
+                   }
+                    
+                }
+                .slider figure div{
+                    float: left;
+                    margin: 0;
+                    height: 30%;
+                    padding: 0;
+                    
+                    font-size: 2vw;
+                    width: 33%;
+                    text-align: center;
+                }
+                
+                .d3{
+                    
+                   background: white;
+                    padding: 0;
+                    padding-top:20vh;
+                    padding-bottom: 20vh;
+                    text-align: center;
+                }
+                .d3 span{
+                    
+                    color: grey;
+                    font-size: 10vw;
+                    margin: 0;
+                    font-family: sans-serif;
+                }
+                .d3 blockquote{
+                    font-size: 4vh;
+                }
+                .d3 blockquote span{
+                    font-size: 2vw;
+                    color: red;
+                }
+    
+                .d4{
+                    width: 100%;
+                    color: white;;
+                    font-size: 10vw;
+                    margin: 0;
+                    font-family: sans-serif;
+                    text-align: center;
+                    background: grey;
+                    padding-top: 20vh;
+                }
+                .tribute{
+                    font-size: 3vw;
+                    padding-bottom: 10vh;
+                    margin-top: 5%;
+                   
+                   
+                }
+                #visit{
+                    animation: fady 2s   infinite ;
+                    
+                    padding: 1%;
+                    box-shadow: 1px 1px 10px;
+                }
+                @keyframes fady {
+                    0%{
+                        color: black;
+    
+                        
+                    }
+                    
+                    50%{
+                        color: white;
+                    }
+                    100%{
+                        color: black;
+                    }
+                    
+                }
+                .d5{
+                    width: 100%;
+                    height: 100vh;
+                    background: black;
+                    text-align: center;
+                    padding-top: 20vh;
+                }
+               
+                .condiv{
+                    
+                    width: 100%;
+                    color: GREY;
+                    font-size: 10vw;
+                    padding-bottom: 3%;
+                    font-family: sans-serif;
+                }
+                #mobile,#email{
+                
+                    
+                    width: 49%;
+                    height: 40%;
+                    float: left;
+                    color: white;
+                    font-family: sans-serif;
+                    font-size: 5vh;
+    
+                }
+                .footer{
+                    background: rgb(26,26,26);
+                    width: 100vw;
+                    height: 20vh;
+                    box-shadow: 0px -5px 10px;
+            
+                }
+                .footer span{
+                 color: white;
+                 font-size: 4vw;
+                 font-family: sans-serif;
+                 margin-left: 10%;
+               
+    
+                }
+                .sociallink{
+                    
+                    display: flex;
+                    width: 100%;
+                    height: 10vh;
+                    justify-content: space-around;
+                    position: relative;
+                }
+                .sociallink div{
+                    padding: 2%;
+                    padding-top:4%;
+                    padding-bottom: 4%;
+                    border-radius: 15px;
+                    font-size: 150%;    
+                    
+                }
+                    .facebook{
+                        background: #3B5998;
+                        color: white;
+                        transition: .5s;
+                    }
+                    .facebook:hover{
+                        transform: scale(1.2);
+                    }
+                    .codepen{
+                        background: grey;
+                        color: white;
+                        transition: .5s;
+                    }
+                    .codepen:hover{
+                        transform: scale(1.2);
+                    }
+                
+                
+                    
+                
+            </style>
+        </head>
+        <body>
+            <div  id="navi"class="nav" onclick="scroll()">&darr;</div>
+            <div class="header">
+                    <h1>SASHI VERMA</h1>
+                    <h4 onclick="gotoskill()">Skills</h4>
+                    <h4 onclick="gotoabout()"> About </h4>
+                    <h4 onclick="gotoproject()"> Project </h4>
+                    <h4 onclick="gotocon()"> Contact</h4>
+                </div>
+            <div class="d1">
+                  
+                   <span class="txtport"> <h1 style="opacity:9;">P O R T F O L I O</h1> </span>
+            </div>
+            
+            <!-- END OF D1-->
+    
+            <div id="divskills" class="d2 slider">
+                <div class="skills"><span>SKILLS</span></div>
+                <figure>
+                    <div class="slide">
+                        <h1>HTML  ,  HTML5</h1>
+                    </div>
+                    <div class="slide">
+                            <H1> CSS , BOOTSTRAP</H1>
+                    </div>
+                    <div class="slide">
+                            <H1> JAVASCRIPT , JQUERY </H1>
+                    </div>
+                    
+                                    
+                </figure>
+            </div>
+            
+            <!-- END OF D2-->
+            <div class="d3" id="divabout">
+                <span> ABOUT</span>
+                <p> <strong>My Policy</strong>  </p>
+                <blockquote>
+                    Never stop <span>LEARNING</span> because life will never stop <span>TEACHING</span>  !
+                </blockquote>
+            </div>
+            <!-- END OF D3......................................................................-->
+            
+            
+            <div id="divproject"  class="d4">
+                <div class="project">PROJECT</div>
+                <div class="tribute">
+                   <a id="visit"style="text-decoration:none;color:black;" href="https://codepen.io/sashiverma/pen/RZopQx"> M.S DHONI : TRIBUTE</a><br><br><p style="font-size:2vw;"> please visit my  <a href="https://codepen.io/sashiverma/"><strong style="font-size:3vw;">CODEPEN </strong></a>link below for more projects.<p>
+                </div>
+    
+            </div>
+            
+            
+            <!------------------------------------- END OF D5-------------------------------->
+            <div  id="divcon"class="d5">
+               <div class="condiv"> CONTACT</div>
+                <div id="mobile">
+                    <div>RING AT</div>
+                    <div style="font-size: 3vw;margin-top:10%;">8870870608</div>
+                </div>
+                <div id="email">
+                    <div>MAIL AT</div>
+                    <div style="font-size: 3vw;margin-top:10%;">sashiverma.r@gmail.com</div>
+                </div>
+                <div class="sociallink">
+                <a style="text-decoration:none;" href="https://www.facebook.com/sashi.verma.501?ref=bookmarks"> <div class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    FACEBOOK</div></a>
+    
+                 <a style="text-decoration:none;" href="https://codepen.io/sashiverma/">             
+                    <div class="codepen"><i class="fa fa-codepen" aria-hidden="true"></i>
+                    CODE PEN</div></a>
+                    
+    
+                </div>
+            </div><!-- END OF D5-->
+            <div class="footer">
+                <span>&copy</span>
+            </div>
+            
+            <script>
+                function scroll(){
+                   window.scrollBy(0,500);
+                }
+                function gotocon(){
+                    //window.scrollTo(0,findPos(document.getElementById("divcon")));
+                    window.location.hash = '#divcon';
+                }
+                function gotoabout (){
+                    window.location.hash = '#divabout'; 
+                }
+                function gotoproject(){
+                    window.location.hash = '#divproject';
+                }
+                function gotoskill(){
+                    window.location.hash = '#divskills';
+                }
+                
+            
+            </script>
+        </body>
+    </html>
