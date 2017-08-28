@@ -7,32 +7,12 @@
     <title>canvas</title>
     <style>
     *{ margin:0; padding: 0; }
-    canvas{
-           } 
-    .control{
-        background: grey;
-        width: 100vw;
-        height: 20vh;
-    
-        line-height: 10vh;
-        }
-        .control span{
-            padding: 2%;
-            border-radius: 15px;
-            margin: 2%;
-            background: white;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <canvas>
        
     </canvas>
-    <div class="control">
-         <span>Velocity:</span> <span onclick="velinc()" >+</span><span onclick="veldec()">-</span>
-    </div>
-    
     <script>
         var canvas =  document.querySelector('canvas');
         canvas.width = window.innerWidth;
@@ -217,14 +197,6 @@
 
          } // end of function move()
 move(); //function call
-function velinc(){
-    initialvelocity = initialvelocity + 1 ;
-}
-function veldec(){
-    initialvelocity = initialvelocity - 1 ;
-    
-}
-
     </script>
 </body>
 </html>
