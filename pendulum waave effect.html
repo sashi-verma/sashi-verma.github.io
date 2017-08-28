@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+    <style>
+    *{ margin:0; padding: 0; }
+    canvas{
+           } 
+    .control{
+        background: grey;
+        width: 100vw;
+        height: 20vh;
+    
+        line-height: 10vh;
+        }
+        .control span{
+            padding: 2%;
+            border-radius: 15px;
+            margin: 2%;
+            background: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas>
+       
+    </canvas>
+    <div class="control">
+         <span>Velocity:</span> <span onclick="velinc()" >+</span><span onclick="veldec()">-</span>
+    </div>
+    
+    <script>
+        var canvas =  document.querySelector('canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var c = canvas.getContext('2d');
+        
+        //position of circles..
+        var x1 = 20;
+        var y1 = 20;
+        
+        var x2 = 20;
+        var y2 = 60;
+        
+        var x3 = 20;
+        var y3 = 100;
+        
+        var x4 = 20;
+        var y4 = 140;
+
+        var x5 = 20;
+        var y5 = 180;
+
+        var x6 = 20;
+        var y6 = 220;
+        
+        var x7 = 20;
+        var y7 = 260;
+       
+        var x8 = 20;
+        var y8 = 300;
+
+        var x9 = 20;
+        var y9 = 340;
+
+        var x10 = 20;
+        var y10 = 380;
+
+        var x11 = 20;
+        var y11 = 420;
+
+        var x12 = 20;
+        var y12 = 460;
+
+        var x13 = 20;
+        var y13 = 500;
+
+
+       // velocity of circles 
+    /*   var initialvelocity =8; // no need the below lines if this is added..
+       var dx1 = initialvelocity;
+        var dx2 = initialvelocity-.5;
+        var dx3 = initialvelocity-1;
+        var dx4 = initialvelocity-1.5;
+        var dx5 = initialvelocity-2;
+        var dx6 = initialvelocity-2.5;
+        var dx7 = initialvelocity-3;
+        var dx8 = initialvelocity-3.5;
+        var dx9 = initialvelocity-4;
+        var dx10 =initialvelocity-4.5;
+        var dx11 =initialvelocity-5;
+        var dx12 =initialvelocity-5.5;
+        var dx13 =initialvelocity-6; */
+   
+   //for pendulum wave effect
+        var initialvelocity =8; // no need the below lines if this is added..
+        var dx1 = 7.8;
+        var dx2 = 7.6;
+        var dx3 = 7.4;
+        var dx4 = 7.2;
+        var dx5 = 7;
+        var dx6 = 6.8;
+        var dx7 = 6.6;
+        var dx8 = 6.4;
+        var dx9 = 6.2;
+        var dx10 = 6;
+        var dx11 = 5.8;
+        var dx12 = 5.6;
+        var dx13 = 5.4;
+       
+      function move(){ 
+       
+        c.clearRect(0,0,innerWidth,innerHeight);
+        requestAnimationFrame(move);
+             
+                c.beginPath();
+                c.strokeStyle="#FF5E4B";
+                c.arc(x1 ,y1,20,0,Math.PI*2,false);  c.stroke(); //1
+            //comment the beginpath() for nice visual
+                //c.beginPath();
+                c.arc(x2 ,y2,20,0,Math.PI*2,false);  c.stroke(); //2
+               
+               // c.beginPath();
+                c.arc(x3 ,y3,20,0,Math.PI*2,false);  c.stroke(); //3
+                
+               // c.beginPath();
+                c.arc(x4 ,y4,20,0,Math.PI*2,false);  c.stroke(); //4
+                
+                //c.beginPath();
+                c.arc(x5 ,y5,20,0,Math.PI*2,false);  c.stroke(); //5
+                
+               // c.beginPath();
+                c.arc(x6 ,y6,20,0,Math.PI*2,false);  c.stroke(); //6
+
+               // c.beginPath();
+                c.arc(x7 ,y7,20,0,Math.PI*2,false);  c.stroke(); //7
+                
+                //c.beginPath();
+                c.arc(x8 ,y8,20,0,Math.PI*2,false);  c.stroke(); //8
+
+               // c.beginPath();
+                c.arc(x9 ,y9,20,0,Math.PI*2,false);  c.stroke(); //9
+
+               // c.beginPath();
+                c.arc(x10 ,y10,20,0,Math.PI*2,false);  c.stroke(); //10
+
+               // c.beginPath();
+                c.arc(x11 ,y11,20,0,Math.PI*2,false);  c.stroke(); // 11
+
+              //  c.beginPath();
+                c.arc(x12 ,y12,20,0,Math.PI*2,false);  c.stroke(); // 12
+
+                //c.beginPath();
+                c.arc(x13 ,y13,20,0,Math.PI*2,false);  c.stroke(); // 13
+
+                //condition to bounce within the view area
+                if(x1+50 > innerWidth || x1 < 0){
+                    dx1=-dx1;
+                }
+                if(x2+50 > innerWidth || x2 < 0){
+                    dx2=-dx2;
+                }
+                if(x3+50 > innerWidth || x3 < 0){
+                    dx3=-dx3;
+                }
+                if(x4+50 > innerWidth || x4 < 0){
+                    dx4=-dx4;
+                }
+                if(x5+50 > innerWidth || x5 < 0){
+                    dx5=-dx5;
+                }
+                if(x6+50 > innerWidth || x6 < 0){
+                    dx6=-dx6;
+                }
+
+                if(x7+50 > innerWidth || x7 < 0){
+                    dx7=-dx7;
+                }
+                if(x8+50 > innerWidth || x8 < 0){
+                    dx8=-dx8;
+                }
+                if(x9+50 > innerWidth || x9 < 0){
+                    dx9=-dx9;
+                }
+                if(x10+50 > innerWidth || x10 < 0){
+                    dx10=-dx10;
+                }
+                if(x11+50 > innerWidth || x11 < 0){
+                    dx11=-dx11;
+                }
+                if(x12+50 > innerWidth || x12 < 0){
+                    dx12=-dx12;
+                }
+                if(x13+50 > innerWidth || x13 < 0){
+                    dx13=-dx13;
+                }
+               
+               
+                x1 = dx1 + x1; 
+                x2 = dx2 + x2; 
+                x3 = dx3 + x3; 
+                x4 = dx4 + x4; 
+                x5 = dx5 + x5; 
+                x6 = dx6 + x6; 
+                x7 = dx7 + x7; 
+                x8 = dx8 + x8; 
+                x9 = dx9 + x9;
+                x10 = dx10 + x10;
+                x11 = dx11 + x11;
+                x12 = dx12 + x12;
+                x13 = dx13 + x13;  
+               
+
+         } // end of function move()
+move(); //function call
+function velinc(){
+    initialvelocity = initialvelocity + 1 ;
+}
+function veldec(){
+    initialvelocity = initialvelocity - 1 ;
+    
+}
+
+    </script>
+</body>
+</html>
