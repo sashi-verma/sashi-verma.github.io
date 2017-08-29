@@ -35,11 +35,11 @@
                     top: 0;
                     left: 0;
                     position: fixed;
-                    padding-top: 1%;
+                    
                     height: 7vw;
                     background: rgb(26,26,26);
                     box-shadow: 0px 5px 10px;
-                    
+                    transition: all .3s;
                     display: flex;
     
                     margin: 0;
@@ -49,9 +49,10 @@
                     opacity: .3;
                     color: grey;
                     font-size: 5vw;
+                    transition: 1s;
                 }
                 .header h4{
-                    margin-top: 5%;
+                    margin-top: 1%;
                     font-size: 2vw;
                     margin-left: 5vw;
                     color: white;
@@ -66,8 +67,8 @@
                        font-size: 3vh;
                    }
                    .header h1{
-                    
-                    font-size: 4vw;
+                    display: none;
+                    color: red;
                      }
     
                      #mobile,#email{
@@ -221,20 +222,9 @@
                     box-shadow: 1px 1px 10px;
                 }
                 @keyframes fady {
-                    0%{
-                        color: black;
-    
-                        
-                    }
-                    
-                    50%{
-                        color: white;
-                    }
-                    100%{
-                        color: black;
-                    }
-                    
-                }
+                    0%{color: black;}
+                    50%{color: white;}
+                    100%{color: black;}}
                 .d5{
                     width: 100%;
                     height: 100vh;
@@ -317,13 +307,34 @@
         </head>
         <body>
             <div  id="navi"class="nav" onclick="scroll()">&darr;</div>
-            <div class="header">
-                    <h1>SASHI VERMA</h1>
+            <div id="head" class="header">
+                    <h1 id="name1">SASHI VERMA</h1>
                     <h4 onclick="gotoskill()">Skills</h4>
                     <h4 onclick="gotoabout()"> About </h4>
                     <h4 onclick="gotoproject()"> Project </h4>
                     <h4 onclick="gotocon()"> Contact</h4>
                 </div>
+                <script>
+                    window.addEventListener("scroll" , changeheader);
+                    var header,namee,ypos;
+                function changeheader(){
+                 header = document.getElementById('head');
+                 namee = document.getElementById('name1');
+                 ypos = window.pageYOffset;
+                console.log(ypos);
+                if(ypos > 150){
+                    header.style.height = "3vw";
+                    header.style.textAlign = "right";
+                    namee.style.display = "none";
+                    
+                    
+                }
+                else{
+                    header.style.height = "7vw";
+                    namee.style.display = "block";
+                }
+            }
+                </script>
             <div class="d1">
                   
                    <span class="txtport"> <h1 style="opacity:9;">P O R T F O L I O</h1> </span>
@@ -362,7 +373,7 @@
             <div id="divproject"  class="d4">
                 <div class="project">PROJECT</div>
                 <div class="tribute">
-                   <a id="visit"style="text-decoration:none;color:black;" href="https://codepen.io/sashiverma/pen/RZopQx"> M.S DHONI : TRIBUTE</a><br><br><p style="font-size:2vw;"> please visit my  <a href="https://codepen.io/sashiverma/"><strong style="font-size:3vw;">CODEPEN </strong></a>link below for more projects.<p>
+                   <a id="visit"style="text-decoration:none;color:black;" href="https://sashi-verma.github.io/pwe.html"> Pendulum Wave Effect</a><br><br><p style="font-size:2vw;"> please visit my  <a href="https://codepen.io/sashiverma/"><strong style="font-size:3vw;">CODEPEN </strong></a>link below for more projects.<p>
                 </div>
     
             </div>
