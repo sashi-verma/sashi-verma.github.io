@@ -18,13 +18,15 @@
         var c = canvas.getContext('2d');
         
      //circle posistions
+    var noc = 30; //number of circles.
     var cx = []; 
     var cy = [];
-    var counter = 20;
-    for(i=0;i<=12;i++){
+    var roc = 10;  //radius of circle
+    var counter = roc;
+    for(i=0;i<=(noc-1);i++){
        cx[i] = 20;
        cy[i] = counter;
-       counter = counter + 40;
+       counter = counter + (roc*2);
        //console.log("cx ["+i +"] :"+ cx[i]);
        //console.log("cy ["+i +"] :"+ cy[i]);
        //console.log('');
@@ -33,7 +35,7 @@
        // velocity of circles dx
         var dx = [];
         var dxcounter = 7.8;
-        for (i=0;i<=12;i++){
+        for (i=0;i<=(noc-1);i++){
               dx[i] = dxcounter ;
               dxcounter = dxcounter - .2;
               //console.log("dx["+i+"] ="+dx[i]);
@@ -45,25 +47,26 @@
                 function circle(x,y){
                     c.beginPath();
                     c.strokeStyle="000000";
-                    c.arc(x ,y,20,0,Math.PI*2,false);  
+                    c.arc(x ,y,roc,0,Math.PI*2,false);  
                     c.stroke();
                 }
-                for(i=0;i<=12;i++){
+                //c.beginPath(); uncomment this line and comment line:48 for another visual
+                for(i=0;i<=(noc-1);i++){
                     circle(cx[i],cy[i]);    
                 }
                 //condition to bounce within the view area
-                for(i=0;i<=12;i++){
+                for(i=0;i<=(noc-1);i++){
                     if(cx[i]+50 > innerWidth || cx[i] < 0){
                     dx[i]=-dx[i];
                 }}
                 // change in x position for circles
-                for(i=0;i<=12;i++){
+                for(i=0;i<=(noc-1);i++){
                     cx[i]=dx[i]+cx[i];
                 }
                 } // end of function move()
 move(); //function call
 
-//276 lines reduced to 69 lines using functions and array.
+//276 lines reduced to 72 lines ussing functions and array.
     </script>
 </body>
 </html>
