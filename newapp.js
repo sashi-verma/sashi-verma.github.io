@@ -5,7 +5,7 @@ canvas.height = window.innerHeight;
 const context = canvas.getContext("2d");
 const frameCount = 119;
 
-const currentFrame = (index) => `./best-ball/${(index + 1).toString()}.png`;
+const currentFrame = (index) => `./${(index + 1).toString()}.png`;
 
 const images = [];
 let ball = { frame: 0 };
