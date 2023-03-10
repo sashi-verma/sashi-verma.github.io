@@ -37,7 +37,7 @@ gsap.fromTo(
   {
     opacity: 1,
     scrollTrigger: {
-      scrub: 1,
+      scrub: 5,
 
       start: "60%",
       end: "70%",
