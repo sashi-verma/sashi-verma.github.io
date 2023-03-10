@@ -3,14 +3,14 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const context = canvas.getContext("2d");
-const frameCount = 119;
+const frameCount = 40;
 
-const currentFrame = (index) => `./best-ball/${(index + 1).toString()}.png`;
+const currentFrame = (index) => `./best-ball/${(index + 1).toString()}.jpg`;
 
 const images = [];
 let ball = { frame: 0 };
 
-for (let i = 0; i < frameCount; i++) {
+for (let i = 0; i < frameCount; i+2) {
   const img = new Image();
   img.src = currentFrame(i);
   console.log(currentFrame(i));
@@ -22,7 +22,7 @@ gsap.to(ball, {
   snap: "frame",
   ease: "none",
   scrollTrigger: {
-    scrub: 0.5,
+    scrub: 1,
     pin: "canvas",
     end: "500%",
   },
