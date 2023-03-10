@@ -10,7 +10,7 @@ const currentFrame = (index) => `./best-ball/${(index + 1).toString()}.jpg`;
 const images = [];
 let ball = { frame: 0 };
 
-for (let i = 0; i < frameCount; i+2) {
+for (let i = 0; i < frameCount; i++) {
   const img = new Image();
   img.src = currentFrame(i);
   console.log(currentFrame(i));
@@ -37,7 +37,7 @@ gsap.fromTo(
   {
     opacity: 1,
     scrollTrigger: {
-      scrub: 5,
+      scrub: 2,
 
       start: "60%",
       end: "70%",
