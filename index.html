@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./newstyle.css" />
-  
-  </head>
-  <body>
-    <h2 class="ball-text">Sashi design.</h2>
-    <canvas class="canvas"></canvas>
-    <div class="details">
-      <h1>Pretty cool 🔥🔥</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./newstyle.css" />
+
+</head>
+
+<body>
+  <nav id="menu" class="navbar">
+    <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
+    <ul>
+      <li> <a href="./index.html"> <img style="width: 35px;" src="assests\SVG\saz logo.svg"> </a> </li>
+      <li style="padding-left: 20px;"><a href="./experience.html">Experience</a></li>
+      <li><a href="https://www.behance.net/sashiverma">Work</a></li>
+      <li><a href="http://">Contact</a></li>
+      <li><a href="http://">Download CV</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="left-content">
+      <div class="quotes">"Every great design<br>
+        begins with an even better story."
+      <div class="card" style="margin-top: 10px;" ></div>
+      </div>
+
+      <div class="name">Sashi Verma
+        <h6 class="profile" style="color: #ffcc00;font-size: 1rem; margin-left: 3px; ">DIGITAL CREATOR.</h6>
+      </div>
+      
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
-      integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./newapp.js"></script>
-  </body>
+    <div class="right-content">
+      <h1 style="font-size: 4rem;color: #ffcc00;">Hey there!</h1>
+      <p class="introduction">Hello! I'm Sashi Verma, a digital creator with over 5 years of experience. I specialize in developing brands through design, branding, and marketing. My expertise lies in creating designs that capture the essence of a brand and communicate it effectively to the target audience. Let's collaborate to create something amazing!</p>
+      <button class="btn"> Experience </button>
+    </div>
+
+  </div>
+
+  <canvas class="canvas"></canvas>
+  
+  <!-- 
+    <div class="details">
+      <h1>Pretty cool 🔥🔥</h1>
+    </div> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+    integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./newapp.js"></script>
+</body>
+
 </html>

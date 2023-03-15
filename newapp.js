@@ -24,29 +24,70 @@ gsap.to(ball, {
   scrollTrigger: {
     scrub: 1,
     pin: "canvas",
-    end: "500%",
+    end: "200%",
   },
   onUpdate: render,
 });
 
 gsap.fromTo(
-  ".ball-text",
+  ".left-content",
+  {
+    opacity: 1,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+
+      start: "0%",
+      end: "1%",
+    },
+    onComplete: () => {
+      gsap.to(".left-content", { opacity: 0 });
+    }
+  },  
+);
+gsap.fromTo(
+  ".right-content",
   {
     opacity: 0,
   },
   {
     opacity: 1,
     scrollTrigger: {
-      scrub: 2,
+      scrub: 1,
 
-      start: "60%",
-      end: "70%",
+      start: "50%",
+      end: "61%",
     },
     onComplete: () => {
-      gsap.to(".ball-text", { opacity: 0 });
-    },
-  }
+      gsap.to(".right-content", { opacity: 1 });
+    }
+  },  
 );
+
+gsap.fromTo(
+  ".navbar",
+  {
+    opacity: 1,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+
+      start: "0%",
+      end: "50%",
+    },
+    onComplete: () => {
+      gsap.to(".navbar", { opacity: 1 });
+    }
+  },  
+);
+
+
+
+
 
 images[0].onload = render;
 

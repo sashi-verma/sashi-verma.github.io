@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0px;
+}
+body{
+    /*background-image: url(./assests/landing\ page\ 3d.png); */
+background-repeat: no-repeat;
+width: 100vw;
+height: 100vh;
+     background:#1b1b1b
+}
+.experience-container {
+    width: 100vw;
+    height: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0;
+    margin-top: 30px;
+    
+
+}
+
+.exp-about-me {
+    width: 80%;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.company-list{
+    width: 100%;
+   /* background: red; */
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.company-card{
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #3b003b;
+    /* background: green; */
+    padding: 10px;
+    background: #1b1b1b;
+    transition: box-shadow .25s;
+}
+.company-card:hover{
+    box-shadow: 0px 0px 24px #d200d2;
+}
+
+.year{
+    font-size: .8rem;
+    color: white;
+    text-align: left;
+}
+.company-image{
+    margin-top: 10px;
+    background: blue; 
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+.company-name{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.company-name a {
+    text-decoration: none;
+}
+
+.company-name a:hover{
+    text-decoration:solid;
+    text-decoration-color: #d200d2;
+}
+
+.read-btn{
+    border: none;
+    padding: 5px;
+    background: #3d3000;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all .25s ease-in;
+    color: white;
+    
+}
+.read-btn:hover{
+    background: #ffcc00;
+    color: #1b1b1b;
+}
+
+.popup .overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: none;
+    
+}
+.popup .content {
+    position: absolute;
+    background: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale (0);
+    opacity: 0;
+    /* background: red; */
+    padding: 10px;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #ffcc00;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    top: 10px;
+    color: #1b1b1b;
+    cursor: pointer;
+}
+
+.popup .popup-txt-content {
+    margin-top: 8%;
+    background: #efefef;
+    padding: 20px;
+}
+
+.popup.active .overlay{
+display: block;
+}
+
+.popup.active .content{
+    transition: all 1s ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
